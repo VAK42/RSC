@@ -1,1 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1vw;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Noto Sans", sans-serif;
+}
 
+.anmt {
+  position: relative;
+  overflow: hidden;
+}
+
+.anmt:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid cyan;
+  transition: left 0.5s ease;
+}
+
+.anmt:hover {
+  cursor: pointer;
+}
+
+.anmt:hover:before {
+  left: 0;
+}
+
+.anmt2 {
+  display: block;
+  height: 4.15vw;
+  overflow: hidden;
+  transform: translate(-45%, 0);
+  animation: sanmt2 1.5s ease-in-out forwards;
+}
+
+@keyframes sanmt2 {
+  0% {
+    border-bottom: 0 solid cyan;
+    width: 0;
+    transform: translate(-45%, 0);
+  }
+  100% {
+    border-bottom: 4px solid cyan;
+    width: 50.8vw;
+    transform: translate(0, 0);
+  }
+}
+
+.anmt4:hover {
+  animation: b-t 0.5s ease-in-out forwards;
+}
+
+@keyframes b-t {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2.5%);
+  }
+}
+
+.anmt6:hover {
+  animation: sanmt6 0.5s ease-in-out forwards;
+}
+
+@keyframes sanmt6 {
+  0% {
+    font-size: 100%;
+  }
+  100% {
+    font-size: 120%;
+  }
+}
+
+.anmt8 {
+  animation: sanmt8 20s ease-in-out infinite;
+}
+
+@keyframes sanmt8 {
+  0% {
+    transform: translate(-1%, -1%);
+  }
+  12.5% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1%, 1%);
+  }
+  37.5% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1%, 1%);
+  }
+  62.5% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(1%, -1%);
+  }
+  87.5% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-1%, -1%);
+  }
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  animation: anmt10 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes anmt10 {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
