@@ -1,4 +1,4 @@
-# Ryan Sports Club (RSC) - Comprehensive Technical Documentation
+# Ryan Sports Club - Comprehensive Technical Documentation
 
 ## 1. Project Overview & Architectural Vision
 
